@@ -1,1 +1,72 @@
+:root {
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --accent: #38bdf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.projects {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #020617;
+  padding: 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--light);
+  transition: transform .3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
 
