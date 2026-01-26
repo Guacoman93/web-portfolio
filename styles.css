@@ -1,0 +1,28 @@
+body {
+  font-family: Inter, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.hero {
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.projects {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+.project {
+  border-bottom: 1px solid #334155;
+  padding: 40px 0;
+}
+
+.links a {
+  margin-right: 20px;
+  color: #22c55e;
+  text-decoration: none;
+}
