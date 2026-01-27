@@ -3,103 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ricardo Borges | Web Developer</title>
+  <title>Daniel Bofi | Web Developer</title>
 
-  <meta name="description" content="Portfolio profesional de desarrollo web. Proyectos corporativos, landing pages animadas y soluciones empresariales." />
-
-  <!-- CSS principal del portfolio -->
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <header class="hero">
-    <div class="hero-content">
-      <h1>Junior Web Development</h1>
+    <div class="container">
+      <h1>
+        Hola, soy <span>Daniel Bofi</span><br />
+        Web Developer
+      </h1>
       <p>
-        Diseño y desarrollo de sitios web modernos, escalables y orientados a empresas.
+        Diseño y desarrollo sitios web modernos, animados y optimizados para
+        empresas que buscan presencia digital profesional.
       </p>
-      <a href="#projects" class="btn-primary">Ver proyectos</a>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#contact" class="btn-secondary">Contacto</a>
+      </div>
     </div>
   </header>
 
-  <!-- SOBRE MI -->
-  <section class="about">
-    <h2>Sobre mí</h2>
+  <!-- ===== PROYECTOS ===== -->
+  <section id="projects" class="container">
+    <h2>Proyectos Destacados</h2>
     <p>
-      Soy desarrollador web enfocado en crear experiencias digitales profesionales
-      para empresas y marcas que buscan presencia, credibilidad y resultados.
+      Algunos de los sitios web que desarrollé, enfocados en diseño moderno,
+      animaciones suaves y experiencia de usuario.
     </p>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="projects" class="projects">
-    <h2>Proyectos destacados</h2>
 
     <div class="projects-grid">
 
-      <!-- Proyecto 1 -->
-      <a
-        href="projects/animated-business/index.html"
-        class="project-card"
-      >
+      <!-- PROYECTO 1 -->
+      <div class="project-card">
         <h3>Animated Business Landing</h3>
         <p>
-          Landing page corporativa con animaciones avanzadas y enfoque comercial.
+          Landing page animada orientada a negocios digitales y startups.
         </p>
-        <span class="project-tag">Landing Page</span>
-      </a>
+        <div class="project-links">
+          <a href="projects/animated-business-landing/index.html" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+      </div>
 
-      <!-- Proyecto 2 -->
-      <a
-        href="projects/business-landing/index.html"
-        class="project-card"
-      >
+      <!-- PROYECTO 2 -->
+      <div class="project-card">
         <h3>Business Landing Page</h3>
         <p>
-          Página de presentación para empresas con diseño limpio y estructura moderna.
+          Página corporativa enfocada en conversión y presentación de servicios.
         </p>
-        <span class="project-tag">Corporate</span>
-      </a>
+        <div class="project-links">
+          <a href="projects/business-landing-page/index.html" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+      </div>
 
-      <!-- Proyecto 3 -->
-      <a
-        href="projects/corporate-website/index.html"
-        class="project-card"
-      >
+      <!-- PROYECTO 3 -->
+      <div class="project-card">
         <h3>Corporate Company Website</h3>
         <p>
-          Sitio web institucional completo para empresas B2B.
+          Sitio web completo para empresa, con estructura profesional y branding.
         </p>
-        <span class="project-tag">Website</span>
-      </a>
+        <div class="project-links">
+          <a href="projects/corporate-company-website/index.html" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+      </div>
 
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section class="contact">
+  <!-- ===== CONTACTO ===== -->
+  <section id="contact" class="container contact">
     <h2>Contacto</h2>
     <p>
-      ¿Buscás un desarrollador web para tu empresa o proyecto?
+      ¿Tenés un proyecto en mente o buscás un desarrollador web?
+      Hablemos.
     </p>
-    <a href="mailto:rdanielbfierro@email.com" class="btn-secondary">
-      Contactarme
+
+    <p class="contact-info">
+      📞 <strong>Teléfono / WhatsApp:</strong> +54 9 TU NUMERO
+    </p>
+
+    <a
+      href="https://wa.me/549XXXXXXXXXX"
+      target="_blank"
+      class="btn-primary"
+    >
+      Contactar por WhatsApp
     </a>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      © 2026 Ricardo Borges — Web Developer
-    </p>
-    <p>
-    📞 +54 9 11 1234 5678
-    </p>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 Daniel Bofi — Web Developer</p>
   </footer>
 
-  <!-- JS principal del portfolio -->
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
