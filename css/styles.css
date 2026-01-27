@@ -1,34 +1,22 @@
-/* ================================
-   VARIABLES
-================================ */
 :root {
-  --bg-dark: #0b132b;
-  --bg-dark-soft: #111a3a;
-  --card-bg: #0f1b3d;
+  --bg: #0b132b;
+  --card: #0f1b3d;
   --primary: #00c6ff;
   --secondary: #0072ff;
-  --text-main: #ffffff;
-  --text-muted: #b5c0e0;
+  --text: #ffffff;
+  --muted: #b5c0e0;
 }
 
-/* ================================
-   RESET
-================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, var(--bg-dark), var(--bg-dark-soft));
-  color: var(--text-main);
-  line-height: 1.6;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #0b132b, #111a3a);
+  color: var(--text);
 }
 
 a {
@@ -36,9 +24,6 @@ a {
   color: inherit;
 }
 
-/* ================================
-   GLOBAL
-================================ */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -49,19 +34,11 @@ section {
   padding: 80px 0;
 }
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.2;
 }
 
 .hero h1 span {
@@ -70,38 +47,31 @@ section {
 
 .hero p {
   margin: 25px 0 40px;
+  color: var(--muted);
   max-width: 600px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
 }
 
 .hero-buttons {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
-/* ================================
-   BUTTONS
-================================ */
+/* BUTTONS */
 .btn-primary,
 .btn-secondary {
-  display: inline-block;
   padding: 14px 30px;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.35);
+  color: #fff;
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 45px rgba(0, 114, 255, 0.55);
 }
 
 .btn-secondary {
@@ -109,25 +79,7 @@ section {
   color: var(--primary);
 }
 
-.btn-secondary:hover {
-  background: rgba(0, 198, 255, 0.1);
-  transform: translateY(-4px);
-}
-
-/* ================================
-   PROJECTS
-================================ */
-#projects h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-}
-
-#projects p {
-  color: var(--text-muted);
-  max-width: 700px;
-  margin-bottom: 50px;
-}
-
+/* PROJECTS */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -135,98 +87,28 @@ section {
 }
 
 .project-card {
-  background: radial-gradient(circle at top, #14225e, var(--card-bg));
+  background: var(--card);
   padding: 30px;
-  border-radius: 18px;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 198, 255, 0.2),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover::before {
-  opacity: 1;
+  border-radius: 16px;
+  transition: 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  transform: translateY(-8px);
 }
 
 .project-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 10px 0 20px;
 }
 
-.project-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--primary);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.project-link:hover {
-  transform: translateX(6px);
-  color: #ffffff;
-}
-
-/* ================================
-   CONTACT
-================================ */
-.contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-
+/* CONTACT */
 .contact p {
-  color: var(--text-muted);
-  max-width: 600px;
-  margin-bottom: 20px;
+  color: var(--muted);
 }
 
-.contact-info {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-/* ================================
-   FOOTER
-================================ */
 footer {
   text-align: center;
-  padding: 40px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
+  padding: 40px;
+  color: var(--muted);
 }
