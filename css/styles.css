@@ -1,33 +1,13 @@
-/* ===============================
-   VARIABLES
-================================ */
-:root {
-  --bg-main: #0b132b;
-  --bg-soft: #111a3a;
-  --card-bg: #0f1b3d;
-  --primary: #00c6ff;
-  --secondary: #0072ff;
-  --text-main: #ffffff;
-  --text-muted: #b5c0e0;
-}
-
-/* ===============================
-   RESET
-================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, var(--bg-main), var(--bg-soft));
-  color: var(--text-main);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
@@ -36,193 +16,118 @@ a {
   color: inherit;
 }
 
-/* ===============================
-   GLOBAL
-================================ */
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-section {
-  padding: 90px 0;
-}
-
-/* ===============================
-   HERO
-================================ */
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: linear-gradient(135deg, #020617, #020617);
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.2;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
 .hero h1 span {
-  color: var(--primary);
+  color: #38bdf8;
 }
 
 .hero p {
-  margin: 25px 0 40px;
   max-width: 600px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cbd5f5;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* ===============================
-   BUTTONS
-================================ */
+/* ===== BOTONES ===== */
 .btn-primary,
 .btn-secondary {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 114, 255, 0.35);
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0, 114, 255, 0.5);
+  background: #38bdf8;
+  color: #020617;
 }
 
 .btn-secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
 }
 
+.btn-primary:hover,
 .btn-secondary:hover {
-  background: rgba(0, 198, 255, 0.12);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* ===============================
-   PROJECTS
-================================ */
-#projects h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-}
-
-#projects > p {
-  color: var(--text-muted);
-  max-width: 700px;
-  margin-bottom: 50px;
+/* ===== PROYECTOS ===== */
+section {
+  padding: 4rem 0;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background: var(--card-bg);
-  padding: 32px;
-  border-radius: 18px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  position: relative;
-  overflow: hidden;
+  background: #020617;
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-}
-
-/* Asegura que el texto siempre esté arriba */
-.project-card * {
-  position: relative;
-  z-index: 2;
 }
 
 .project-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+  color: #38bdf8;
 }
 
 .project-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  color: #cbd5f5;
 }
 
 .project-card a {
-  color: var(--primary);
-  font-weight: 600;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #38bdf8;
+  font-weight: bold;
 }
 
-.project-card a:hover {
-  transform: translateX(6px);
-  color: #ffffff;
-}
-
-/* ===============================
-   CONTACT
-================================ */
+/* ===== CONTACTO ===== */
 .contact {
-  max-width: 700px;
+  text-align: center;
 }
 
-.contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 
-.contact p {
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.contact-info {
-  font-size: 1.05rem;
-  margin-bottom: 30px;
-}
-
-.contact .btn-primary {
-  margin-top: 10px;
-}
-
-/* ===============================
-   FOOTER
-================================ */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 40px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-muted);
+  padding: 1.5rem 0;
   font-size: 0.9rem;
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
+  color: #94a3b8;
 }
