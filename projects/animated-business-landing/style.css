@@ -814,3 +814,81 @@ body {
         gap: 15px;
     }
 }
+/* ===== MENÚ MÓVIL - AGREGAR AL FINAL ===== */
+
+/* Estilos para cuando el menú está activo */
+.nav-menu.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    gap: 0;
+}
+
+.nav-menu.active li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Animación del hamburguesa */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive ya existente - REEMPLAZAR esta sección */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Oculto por defecto en móvil */
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .programs-grid,
+    .transformations-slider,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-features {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
